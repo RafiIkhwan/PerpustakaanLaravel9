@@ -43,8 +43,8 @@
                     <th>Nama Buku</th>
                     <th>Nama Peminjam</th>
                     <th>Nama Petugas</th>
-                    <th>Created_at</th>
-                    <th>Updated_at</th>
+                    <th>Tanggal Pinjam</th>
+                    <th>Dikembalikan</th>
                     <th class="text-center">Aksi</th>
                 </thead>
                 @foreach ($datas as $data)
@@ -53,7 +53,7 @@
                     <td class="p-3">{{ $data->buku->judul }}</td>
                     <td class="p-3">{{ $data->siswa->namasiswa }}</td>
                     <td class="p-3">{{ $data->petugas->namapetugas }}</td>
-                    <td class="p-3">{{ $data->created_at }}</td>
+                    <td class="p-3">{{ $data->created_at->isoFormat('dddd') }}</td>
                     <td class="p-3">{{ $data->updated_at }}</td>
                     <td class="text-center">
                         <a class="btn text-light btn-warning m-1" data-bs-toggle="modal" data-bs-target="#peminjamanEdit-{{ $data->idpinjam }}" href=''>Edit</a>

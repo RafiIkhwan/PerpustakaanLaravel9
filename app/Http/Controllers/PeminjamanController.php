@@ -37,7 +37,7 @@ class PeminjamanController extends Controller
             'idpetugas'    => ['required'],
         ]);
 
-        peminjaman::create([
+        Peminjaman::create([
             'idbuku'        => $request->idbuku,
             'idsiswa'       => $request->idsiswa,
             'idpetugas'     => $request->idpetugas,

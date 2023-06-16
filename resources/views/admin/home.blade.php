@@ -6,7 +6,7 @@
 
 <span>
 @if (session()->has('success'))
-    <div class="alert alert-info position-relative">
+    <div class="alert alert-info position-static">
         {{ session('success') }}
     </div>
 @endif
